@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p class="lead">Mostrando as recomendações de filmes para o usuário {{ search_name }}</p>
+      <div class="d-flex mb-5 flex-wrap">
+      
+    {% for i in range(movie_names|length) %}            
+    <div class="p-2 flex-fill col-md-6">
+        <img class="card-img-top" src="{{ images_url[i] }}">        
+        <table class="table"><tbody><td style="height:100px" class="align-middle"><h5 style="color:white">{{ movie_names[i] }}</h5></td></tbody></table>
+    </div>
+    {% endfor %}          
+{% endblock %}
