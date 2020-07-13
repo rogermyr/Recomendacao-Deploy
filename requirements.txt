@@ -3,6 +3,6 @@ Flask==0.12.2
 Jinja2==2.10
 MarkupSafe==1.0
 Werkzeug==0.14.1
-surprise
-pandas==1.0.5
-numpy==1.16.4
+surprise==1.1.0
+pandas==1.0.1
+numpy==1.18.1
