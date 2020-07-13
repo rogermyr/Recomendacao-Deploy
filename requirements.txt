@@ -2,4 +2,3 @@ pandas
 numpy
 Flask
 surprise
-pickle
