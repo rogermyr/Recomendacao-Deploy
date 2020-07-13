@@ -6,7 +6,7 @@
 <p class="lead">
     <div class="form-group">
       <form action="{{ url_for('index') }}" method="POST">
-      <input type="text" class="form-control" name="userId" placeholder="Digite o ID do Usuário">
+      <input type="text" pattern="\d*" class="form-control" name="userId" placeholder="Digite o ID do Usuário">
       </br>
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
