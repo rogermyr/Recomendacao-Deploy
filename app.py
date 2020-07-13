@@ -7,19 +7,18 @@ from collections import defaultdict
 from surprise import Dataset
 from surprise import Reader
 
-os.chdir(r'C:\FCD\Projetos\Recomendacao\dataset')
 app = flask.Flask(__name__)
 
 # Carregando dataset contendo as recomendações des filmes
-arquivo = "predictions.csv"
+arquivo = "dataset/predictions.csv"
 predictions = pd.read_csv(arquivo)
 
 # Carregando dataset contendo os filmes
-arquivo2 = "movies.csv"
+arquivo2 = "dataset/movies.csv"
 movies = pd.read_csv(arquivo2)
 
 # Carregando dataset contendo a capa dos filmes
-arquivo2 = "movie_poster.csv"
+arquivo2 = "dataset/movie_poster.csv"
 poster = pd.read_csv(arquivo2)
 
 # Mesclando os 2 datasets em um único, associado pela variável movieId
@@ -53,4 +52,6 @@ def sobre():
         return(flask.render_template('sobre.html'))
     
 
-app.run()
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
