@@ -34,7 +34,7 @@ def index():
     
     if flask.request.method == 'POST':
         user = int(flask.request.form['userId'])
-        if user not in data['userId']:
+        if user not in data['userId'] or user > 610:
             return(flask.render_template('negative.html',name=user))
         else:
             results = data[data['userId']==user]
