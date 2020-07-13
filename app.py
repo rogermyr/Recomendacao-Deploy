@@ -10,15 +10,15 @@ from surprise import Reader
 app = flask.Flask(__name__)
 
 # Carregando dataset contendo as recomendações des filmes
-arquivo = "dataset/predictions.csv"
+arquivo = "predictions.csv"
 predictions = pd.read_csv(arquivo)
 
 # Carregando dataset contendo os filmes
-arquivo2 = "dataset/movies.csv"
+arquivo2 = "movies.csv"
 movies = pd.read_csv(arquivo2)
 
 # Carregando dataset contendo a capa dos filmes
-arquivo2 = "dataset/movie_poster.csv"
+arquivo2 = "movie_poster.csv"
 poster = pd.read_csv(arquivo2)
 
 # Mesclando os 2 datasets em um único, associado pela variável movieId
