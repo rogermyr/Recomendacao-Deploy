@@ -2,7 +2,12 @@
 
 {% block content %}
 
-<p class="lead"></p>No sistema de recomendação baseado em filtragem colaborativa o foco é na relação entre usuários e itens.</br> A similaridade dos itens é determinada pela similaridade da avaliação dos mesmos pelos usuários que tenham avaliado os mesmos itens, ou seja, se os usuários tiverem avaliado itens com notas similares, provavelmente eles tenham gostos parecidos e aceitem recomendações com base nesse critério.</p>
+<p>No sistema de recomendação baseado em filtragem colaborativa, o foco é na relação entre os usuários e os itens.</br></br> A similaridade dos itens é determinada pela similaridade da avaliação dos mesmos pelos usuários que tenham avaliado os mesmos itens, ou seja, se os usuários tiverem avaliado itens com notas similares, provavelmente eles tenham gostos parecidos e aceitem recomendações com base nesse critério.
+</br></br>
+O algoritmo utilizado para treinamento do nosso modelo foi o SVD - Singular Value Decomposition, e com ele foi possível fazer as predições das notas dos filmes ainda não vistos de cada usuário contido no dataset.</br></br>
+
+<u><a style="color: cyan;" class="nav-link" target="_blank" rel="noopener noreferrer" href="https://github.com/rogermyr/Recomendacao">Confira o desenvolvimento do projeto até a escolha do algoritmo a ser utilizado</a></u></p>
+
 {% endblock %}
 
     
